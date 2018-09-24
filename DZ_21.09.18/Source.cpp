@@ -184,7 +184,6 @@ void search1(Animal *a)
 
 int main()
 {
-
 	setlocale(LC_ALL, "Rus");
 	my_file.open("in.txt", ios::in);
 
@@ -217,15 +216,12 @@ int main()
 		}
 		int n1;
 		cout << endl;
-		cout << " 1 - Продолжить or 0 - Выход" << endl;
+		cout << " 1 - Продолжить или 0 - Выход" << endl;
 		cin >> n1;
 		if (n1 == 0)
 			break;
 	}
-
-
 	delete[] a;
-
 	system("pause");
 	return 0;
 }
