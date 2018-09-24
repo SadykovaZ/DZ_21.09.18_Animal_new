@@ -1,11 +1,12 @@
-#include<iostream>
+п»ї#include<iostream>
 #include<string>
 #include<fstream>
 
 using namespace std;
-string type[3] = { "Птица", "Скот", "Человек" };
+string type[3] = { "РџС‚РёС†Р°", "РЎРєРѕС‚", "Р§РµР»РѕРІРµРє" };
 ifstream my_file;
 int t;
+
 
 struct Animal
 {
@@ -47,31 +48,31 @@ struct Animal
 	void fill()
 	{
 
-		cout << " 0 - Птица; \n 1 - Скот; \n 2 - Человек;" << endl;
+		cout << " 0 - РџС‚РёС†Р°; \n 1 - РЎРєРѕС‚; \n 2 - Р§РµР»РѕРІРµРє;" << endl;
 		cin >> t_index;
-		cout << "Введите цвет: ";
+		cout << "Р’РІРµРґРёС‚Рµ С†РІРµС‚: ";
 		cin >> color;
-		cout << "Введите скорость: ";
+		cout << "Р’РІРµРґРёС‚Рµ СЃРєРѕСЂРѕСЃС‚СЊ: ";
 		cin >> skorost_peredvij;
 
 		switch (t_index)
 		{
 		case 0:
-			cout << "Введите вид птицы: ";
+			cout << "Р’РІРµРґРёС‚Рµ РІРёРґ РїС‚РёС†С‹: ";
 			cin >> name;
-			cout << "Введите скорость полета: ";
+			cout << "Р’РІРµРґРёС‚Рµ СЃРєРѕСЂРѕСЃС‚СЊ РїРѕР»РµС‚Р°: ";
 			cin >> skorost_poleta;
 			break;
 		case 1:
-			cout << "Введите вид скота: ";
+			cout << "Р’РІРµРґРёС‚Рµ РІРёРґ СЃРєРѕС‚Р°: ";
 			cin >> name;
-			cout << "Животное парнокопытное? ( 1 - да, 0 - нет) ";
+			cout << "Р–РёРІРѕС‚РЅРѕРµ РїР°СЂРЅРѕРєРѕРїС‹С‚РЅРѕРµ? ( 1 - РґР°, 0 - РЅРµС‚) ";
 			cin >> parnokop;
 			break;
 		case 2:
-			cout << "Введите имя человека: ";
+			cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ С‡РµР»РѕРІРµРєР°: ";
 			cin >> name;
-			cout << "Введите IQ: ";
+			cout << "Р’РІРµРґРёС‚Рµ IQ: ";
 			cin >> IQ;
 			break;
 		}
@@ -80,26 +81,26 @@ struct Animal
 	void print()
 	{
 		cout << type[t_index] << endl;
-		cout << "Цвет: ";
+		cout << "Р¦РІРµС‚: ";
 		cout << color<<" ";
-		cout << "Скорость передвижения: ";
+		cout << "РЎРєРѕСЂРѕСЃС‚СЊ РїРµСЂРµРґРІРёР¶РµРЅРёСЏ: ";
 		cout << skorost_peredvij<<" ";
 
 		switch (t_index)
 		{
 		case 0:
-			cout << "Вид птицы: " << name << " ";
-			cout << "Скорость полета  = " << skorost_poleta << endl;
+			cout << "Р’РёРґ РїС‚РёС†С‹: " << name << " ";
+			cout << "РЎРєРѕСЂРѕСЃС‚СЊ РїРѕР»РµС‚Р°  = " << skorost_poleta << endl;
 			break;
 		case 1:
-			cout << "Вид скота: " << name << " ";
+			cout << "Р’РёРґ СЃРєРѕС‚Р°: " << name << " ";
 			if (parnokop)
-				cout << "Парнокопытное. " << endl;
+				cout << "РџР°СЂРЅРѕРєРѕРїС‹С‚РЅРѕРµ. " << endl;
 			else
-				cout << "Не парнокопытное. " << endl;
+				cout << "РќРµ РїР°СЂРЅРѕРєРѕРїС‹С‚РЅРѕРµ. " << endl;
 			break;
 		case 2:
-			cout << "Имя человека: " << name << " ";
+			cout << "РРјСЏ С‡РµР»РѕРІРµРєР°: " << name << " ";
 			cout << "IQ = " << IQ << endl;
 			break;
 		}
@@ -110,7 +111,7 @@ struct Animal
 void search_by_name(Animal* a)
 {
 	string poisk;
-	cout << "Введите вид животного которое хотите поменять: ";
+	cout << "Р’РІРµРґРёС‚Рµ РІРёРґ Р¶РёРІРѕС‚РЅРѕРіРѕ РєРѕС‚РѕСЂРѕРµ С…РѕС‚РёС‚Рµ РїРѕРјРµРЅСЏС‚СЊ: ";
 	cin >> poisk;
 	for (int i = 0; i < t; i++)
 	{
@@ -123,8 +124,8 @@ void search_by_name(Animal* a)
 }
 void search1(Animal *a)
 {
-	cout << "Какой вид хотите найти : " << endl;
-	cout << " 0 - Птица; \n 1 - Скот; \n 2 - Человек;" << endl;
+	cout << "РљР°РєРѕР№ РІРёРґ С…РѕС‚РёС‚Рµ РЅР°Р№С‚Рё : " << endl;
+	cout << " 0 - РџС‚РёС†Р°; \n 1 - РЎРєРѕС‚; \n 2 - Р§РµР»РѕРІРµРє;" << endl;
 	int x;
 	cin >> x;
 	double p_a;
@@ -134,15 +135,15 @@ void search1(Animal *a)
 	switch (x)
 	{
 	case 0:
-		cout << "Введите скорость полета: ";
+		cout << "Р’РІРµРґРёС‚Рµ СЃРєРѕСЂРѕСЃС‚СЊ РїРѕР»РµС‚Р°: ";
 		cin >> p_a;
 		break;
 	case 1:
-		cout << "Животное парнокопытное? ( 1 - да, 0 - нет) ";
+		cout << "Р–РёРІРѕС‚РЅРѕРµ РїР°СЂРЅРѕРєРѕРїС‹С‚РЅРѕРµ? ( 1 - РґР°, 0 - РЅРµС‚) ";
 		cin >> pp;
 		break;
 	case 2:
-		cout << "Введите IQ: ";
+		cout << "Р’РІРµРґРёС‚Рµ IQ: ";
 		cin >> p_iq;
 		break;
 	}
@@ -197,8 +198,8 @@ int main()
 	}
 	while (true)
 	{
-		cout << "Меню: " << endl;
-		cout << " 1 - Печать,\n 2 - Редактирование,\n 3 - Поиск" << endl;
+		cout << "РњРµРЅСЋ: " << endl;
+		cout << " 1 - РџРµС‡Р°С‚СЊ,\n 2 - Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ,\n 3 - РџРѕРёСЃРє" << endl;
 		int n;
 		cin >> n;
 		switch (n)
@@ -216,7 +217,7 @@ int main()
 		}
 		int n1;
 		cout << endl;
-		cout << " 1 - Продолжить or 0 - Выход" << endl;
+		cout << " 1 - РџСЂРѕРґРѕР»Р¶РёС‚СЊ or 0 - Р’С‹С…РѕРґ" << endl;
 		cin >> n1;
 		if (n1 == 0)
 			break;
