@@ -1,0 +1,11 @@
+10
+0 White 10 Penguin 0
+1 Black 10 Cow 1
+2 Beige 5 Wilson 130
+0 Brown 20 Sparrow 30
+1 Dark 40 Horse 1
+2 Blonde 5 Jack 120
+0 Red 10 Parrot 30
+1 Grey 20 Sheep 1
+2 Dark 6 Aman 140
+1 Grey 30 Goat 1
